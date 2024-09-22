@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Edit element</h1>
+<div mat-dialog-content>
+  <form [formGroup]="editForm">
+    <mat-form-field>
+      <mat-label>Position</mat-label>
+      <input matInput formControlName="position" readonly>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Weight</mat-label>
+      <input matInput formControlName="weight" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Symbol</mat-label>
+      <input matInput formControlName="symbol">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button (click)="onSave()">Save</button>
+</div>
